@@ -1,0 +1,172 @@
+
+<div class="container"  class="bg-image"
+style="background-image: url('assets/images/teams-new-landing-bg.jpg');
+  height: 100%;padding-top: 4.5%;min-height: 800px;">
+  <div class="row">
+    <div class="col-lg-1 order-lg-1 order-2">
+      <!-- #ads space -->
+      <a href="https://dream11.onelink.me/2xAP/xqjkc4bf" target="#"><img style="width:100%;min-height: 100px;" src="assets/images/referral.png" ></a>
+      <a href="https://dream11.onelink.me/2xAP/xqjkc4bf" target="#"><img style="width:100%;min-height: 100px;" src="assets/images/referral.png" ></a>
+      <!-- #ads space -->
+    </div>
+   <div class="col-lg-9 order-lg-2 center">
+   
+  
+
+
+    
+      
+<div class="row">
+  <!-- #team 1-->
+  <div style="padding-top: 50px;">
+  <h1  class="text-center ">Select teams to get all Dream 11 Teams for the match</h1> </div>
+
+  
+  <div class="col-lg-6"style="padding-top: 4%;">
+      <div class="text-center">
+        <select class="btn btn-secondary btn-lg dropdown-toggle" name="DDL" (change)="onTeamSelect($event)">
+          <option value="">Choose Team 1</option>
+          <option *ngFor="let team of Teams">{{team}}</option>  
+          </select>
+      </div>
+  
+      <div *ngFor="let players of PlayersLabel">    
+        <button type="button"  (click)="addNewLabel(players)">
+           <label class="btn btn-warning">{{players}}</label>  
+      
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+          <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>
+        </svg>
+      </button>
+      
+    </div>
+   
+      <div *ngFor="let label of labelsToShow">
+        <label > *</label><input type="checkbox" value={{label}} (change)="checkImportantPlayers1($event)"> 
+          <label class="btn btn-success" >{{label}}</label>   <button type="button" class="form-label" (click)="deleteP1(label)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+              <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+            </svg>
+          </button>  
+    </div>
+   <h4> {{displaymessage}}</h4>
+   
+   
+  </div>
+  <!-- #team 1 ends-->
+  
+    <!-- #team 2 -->
+    <div class="col-lg-6"style="padding-top: 4%;">
+   
+  
+      <div class="text-center">
+        <select class="btn btn-secondary btn-lg dropdown-toggle" name="DDL" (change)="onTeamSelect2($event)">
+          <option value="">Choose Team 2</option>
+          <option *ngFor="let team of Teams">{{team}}</option>  
+          </select>
+      </div>
+  
+      <div *ngFor="let players of PlayersLabel2">    
+        <button type="button"  (click)="addNewLabel2(players)">
+      <label  class="btn btn-warning">{{players}}</label>   
+     
+     
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+          <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>
+        </svg>
+      </button>
+    </div>
+    
+      <div *ngFor="let label of labelsToShow2">
+       <input type="checkbox" value={{label}} (change)="checkImportantPlayers2($event)">  
+       <!-- <label class="btn btn-success" [class]="active" >{{manipulateItemName(label)}} [{{manipulateItemType(label)}}] -->
+        <label class="btn btn-success" [class]="active" >{{label}} 
+          <i class="fa-solid fa-cricket-bat-ball"></i>
+        </label>  
+           <button type="button" class="form-label" (click)="deleteP2(label)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+              <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+            </svg>
+           </button>  
+    </div>
+   <h4> {{displaymessage2}}</h4>
+    
+  </div>  
+    <!-- #team 2 ends-->
+</div>
+
+    <div class="row">
+     
+    <div class="col-lg-12 text-center" style="padding-top: 5%;padding-bottom: 5%;">
+      <button type="button" class="btn btn-primary btn-xl" (click)="CreateTeams()">Create Teams</button>
+     
+    </div>
+  
+    <div class="col-lg-12 text-center">
+    <div *ngIf="showpermutations" >
+    
+      <div class="text-center" style="font: bold;color: white">All Possible Combinations {{combinationsLenght}}<br>
+        <!-- <button type="button" class="btn btn-primary" (click)="CreateTeams()">Shuffle Teams</button> -->
+        <button type="button" class="btn btn-primary" (click)="prevPage()">Previous Page</button>-
+        <button type="button" class="btn btn-primary" (click)="nextPage()">Next Page</button>
+      </div>  
+    <table class="table table-striped table-bordered  table-sm text-center" style="margin-left: 1%;">
+      <div style="font: bold;color: white">   [{{startIndex}} to {{endIndex}}]</div>  
+    <div *ngFor="let combination of visibleData ; let i =index">
+      <tr class="text-center"> 
+       
+                <th>  Team {{i+1}}</th>
+                <!-- <div *ngFor="let combinationValue of combinations"> -->
+                 <td>{{ combination}}</td>
+                </tr>
+    </div> <button type="button" class="btn btn-primary" (click)="prevPage()">Previous Page</button>-
+    <button type="button" class="btn btn-primary" (click)="nextPage()">Next Page</button>
+   </table>
+   
+  </div>
+
+
+  </div> 
+
+</div>
+  
+</div>
+ <!-- #non frame section ends -->
+
+<div class="col-lg-2 order-lg-3">
+  <a href="https://dream11.onelink.me/2xAP/xqjkc4bf" target="#"><img style="width:100%;min-height: 100px;" src="assets/images/referral.png" ></a>
+  <iframe src="https://widget.crictimes.org/" style="width:100%;min-height: 450px;padding-top: 4%;" frameborder="0" scrolling="yes"></iframe>
+  
+		
+  <!-- <iframe style="overflow-x:hidden;overflow-y:auto;" src="http://cricket-app-hrd.appspot.com/" width="100%" height="100%" marginheight='0' frameborder="0" scrolling="yes"></iframe> -->
+		
+</div>
+
+
+</div>
+
+
+</div>
+  
+  <!-- <div>
+  <input type="checkbox" value="Santa"(change)="checkValue($event)">
+  <label > Santa</label><br>
+  <input type="checkbox"  value="Banta"(change)="checkValue($event)">
+  <label > Banta</label><br>
+  <input type="checkbox"  value="Panda"(change)="checkValue($event)">
+  <label > Panda</label><br>
+  </div>
+
+  <p>=========================</p>
+  <div>
+    <input type="checkbox" [checked]="option === 'India'"  value="India"(change)="checkRadioValue($event)">
+    <label > India</label><br>
+    <input type="checkbox"  [checked]="option === 'Pakistan'" value="Pakistan"(change)="checkRadioValue($event)">
+    <label> Pakistan</label><br>
+    <input type="checkbox" [checked]="option === 'China'" value="China"(change)="checkRadioValue($event)">
+    <label > China</label><br>
+    </div>
+   -->
+   
